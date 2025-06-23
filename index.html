@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotizador Freelance | Karla Martell</title>
+
+  <!-- Fuente moderna desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Contenedor principal de toda la app -->
+  <main class="container">
+    <!-- Encabezado principal -->
+    <header>
+      <h1>Cotiza tu proyecto freelance</h1>
+      <p>Selecciona los servicios que deseas y obtén un estimado de precio en tiempo real.</p>
+    </header>
+
+    <!-- Formulario interactivo -->
+    <form id="quote-form">
+
+      <!-- PASO 1: Selección de servicios ofrecidos -->
+      <fieldset>
+        <legend>¿Qué servicios necesitas?</legend>
+
+        <!-- Cada input representa un servicio con un precio asociado -->
+        <label><input type="checkbox" name="service" value="300"> Landing Page</label>
+        <label><input type="checkbox" name="service" value="500"> Sitio Web Completo</label>
+        <label><input type="checkbox" name="service" value="250"> Optimización SEO</label>
+        <label><input type="checkbox" name="service" value="400"> Integración API</label>
+        <label><input type="checkbox" name="service" value="150"> Mantenimiento Mensual</label>
+      </fieldset>
+
+      <!-- PASO 2: Nivel de urgencia (afecta el precio con un multiplicador) -->
+      <fieldset>
+        <legend>¿Con qué urgencia necesitas el proyecto?</legend>
+        <select id="urgency">
+          <option value="1">Normal (5-7 días)</option>
+          <option value="1.2">Rápido (2-3 días) (+20%)</option>
+          <option value="1.5">Express (1 día) (+50%)</option>
+        </select>
+      </fieldset>
+
+      <!-- PASO 3: Mostrar resultado en tiempo real -->
+      <fieldset class="result">
+        <legend>💰 Estimado total:</legend>
+        <p id="total">$0</p>
+      </fieldset>
+
+      <!-- Botón de simulación de envío (no funcional aún) -->
+      <button type="submit">Solicitar Cotización</button>
+    </form>
+  </main>
+
+  <!-- Script JS externo para lógica -->
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+:root {
+  --main-color: #3a86ff;
+  --light-blue: #caf0f8;
+  --dark-blue: #023e8a;
+  --gray: #f0f0f0;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* Estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--gray);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(58, 134, 255, 0.25);
+  animation: fadeIn 1s ease-out;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado */
+header h1 {
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* Formulario y campos */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+/* Checkboxes y selector */
+label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Resultado del cálculo */
+.result {
+  background-color: var(--light-blue);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+#total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+
+/* Botón de envío */
+button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+}
