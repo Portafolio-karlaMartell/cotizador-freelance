@@ -18,4 +18,5 @@ Google Fonts (Poppins)
 GitHub Pages (para publicación)
 
 🖥️ Captura de pantalla
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/6cb9a4e7-6006-4602-8edb-8c1d0793e07b)
+
